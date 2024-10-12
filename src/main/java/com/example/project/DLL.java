@@ -65,8 +65,7 @@ public class DLL<T> {
             current = current.next;
     }
     public void removeBetween(T e1, T e2) {
-        //throw new UnsupportedOperationException("Not supported yet.");
-        // throw new UnsupportedOperationException("Not supported yet.");
+
         
         DLLNode<T> tmp1, tmp2, tmp3; 
         

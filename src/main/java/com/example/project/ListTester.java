@@ -3,7 +3,7 @@ package com.example.project;
 public class ListTester {
     public static <T> void circularLeftShift(List <T> list, int n)
     {
-       // throw new UnsupportedOperationException("Not supported yet.");
+       
         
         if(!list.empty() && n>0) {
         	
@@ -24,7 +24,7 @@ public class ListTester {
     }
     public static <T> void reverseCopy(DLL<T> l1, DLL<T> l2)
     {
-        //throw new UnsupportedOperationException("Not supported yet.");
+       
         
         if(!l1.empty() && !l2.full()) { 
         	
