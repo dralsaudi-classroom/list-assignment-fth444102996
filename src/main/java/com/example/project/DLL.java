@@ -65,8 +65,36 @@ public class DLL<T> {
             current = current.next;
     }
     public void removeBetween(T e1, T e2) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //throw new UnsupportedOperationException("Not supported yet.");
         // throw new UnsupportedOperationException("Not supported yet.");
+        
+        DLLNode<T> tmp1, tmp2, tmp3; 
+        
+        if(head!=null) {
+        	tmp1 = head;
+        	
+        	while(tmp1.data!=e1 && tmp1.next!=null) {
+             	tmp1 = tmp1.next;
+            }
+        	if(tmp1.next != null) {
+        		current = tmp1;
+        		while(current.data!=e2 && current.next!=null) {
+        			current = current.next;
+        		}
+        		if(current.data == e2 && tmp1.next!=current) {
+        			tmp2 = tmp1.next;
+        			do {
+        				tmp3 = tmp2;
+        				tmp2 = tmp2.next;
+        				tmp3 = null;
+        			}while(tmp2!=current);
+        			
+        			tmp1.next = current;
+        			current.previous = tmp1;
+        		}
+        	}
+        }
+        
         // Write the method removeBetween, member of the class DoubleLinkedList. The method
         // takes two elements e1 and e2, and removes all the elements between the two elements
         // (e1 and e2 not included). If e1 or e2 or both doesn’t exist, no element will be removed. You can assume the elements to be unique, e1 comes before e2, and that
